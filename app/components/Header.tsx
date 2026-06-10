@@ -1,11 +1,13 @@
 "use client";
 
+import config from "../config";
+
 export default function Header() {
   return (
     <header className="fixed top-0 w-full bg-white shadow-md z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold text-blue-600">
-          🦷 Clínica Sorriso
+          🦷 {config.clinica.nome}
         </div>
 
         <nav className="hidden md:flex gap-8 text-gray-600 font-medium">
