@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex items-center"
+      className="min-h-screen bg-linear-to-br from-blue-50 to-white flex items-center"
     >
       <div className="max-w-6xl mx-auto px-6 py-32 flex flex-col md:flex-row items-center gap-12">
         {/* Texto */}
