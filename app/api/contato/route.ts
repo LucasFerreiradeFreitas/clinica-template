@@ -15,7 +15,6 @@ export async function POST(request: Request) {
     const result = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: "lucas.freitasdevweb@gmail.com",
-      cc: "ranuziagabiela16@gmail.com",
       subject: `Nova mensagem de ${nome}`,
       html: `
         <h2>Nova mensagem do site</h2>
