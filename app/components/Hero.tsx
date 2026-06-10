@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import config from "../config";
 
 export default function Hero() {
@@ -9,7 +10,13 @@ export default function Hero() {
       className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex items-center"
     >
       <div className="max-w-6xl mx-auto px-6 py-32 flex flex-col md:flex-row items-center gap-12">
-        <div className="flex-1 text-center md:text-left">
+        {/* Texto */}
+        <motion.div
+          className="flex-1 text-center md:text-left"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="bg-blue-100 text-blue-600 text-sm font-semibold px-4 py-1 rounded-full">
             ✨ Mais de {config.clinica.experiencia} anos de experiência
           </span>
@@ -36,9 +43,15 @@ export default function Hero() {
               Ver Serviços
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex-1 flex justify-center">
+        {/* Card */}
+        <motion.div
+          className="flex-1 flex justify-center"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <div className="bg-white rounded-3xl shadow-2xl p-10 text-center max-w-sm">
             <div className="text-8xl mb-4">🦷</div>
             <h3 className="text-2xl font-bold text-gray-800">
@@ -67,7 +80,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
